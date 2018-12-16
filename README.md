@@ -21,7 +21,7 @@ yarn start
 # 修改 package.json 里面的项目名和简介
 # 修改 README.md 文件内容
 # 修改 远程仓库的地址
-git remote set-url origin your-git-url
+git remote set-url origin <your-git-url>
 ```
 
 ## 如何安装
@@ -47,18 +47,18 @@ console.log('str', str)
 
 (修改为你自己的
 
-这里列出所有的 API，如果有很多的话，建议这里只写索引，具体的参数信息可以导航到 doc 目录下的文件
+这里列出所有的 API，如果有很多的话，建议这里只写索引，具体的参数信息可以导航到 docs 目录下的文件
 
 ## 如何开发
 
 (修改为你自己的
 
 ```shell
-yarn install
+yarn
 yarn start
 ```
 
-本项目采用[prettier](https://prettier.io/)来统一代码风格，并且会在`pre-commit`前自动 format 你的代码，推荐你在你的编辑器里安装 prettier 插件，并且开启保存文件就自动 format 选项，这样可以在开发的时候，就能自动 format
+本项目采用[prettier](https://prettier.io/)来统一代码风格，并且会在`pre-commit`前自动 format 你本次提交的代码，推荐你在你的编辑器里安装 prettier 插件，并且开启保存文件就自动 format 选项，这样可以在开发的时候，就能自动 format
 
 本项目采用[git flow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow) 工作流，请按照 git flow 工作流来提交合并代码
 
@@ -74,8 +74,7 @@ yarn commit
 
 ```shell
 cd npm-typescript-boilerplate
-# 生成tag
-npm version patch
+# 自动打tag和生成changelog,并修改package.json
+npm run release
 npm publish
-# 发布后会自动push到git仓库
 ```
